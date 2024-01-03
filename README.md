@@ -1,6 +1,6 @@
 # Online Food Order Application
 ### [Live Site](https://react-online-food-order.netlify.app/)
-![Online Food Order Application](https://raw.githubusercontent.com/paul963/react-online-food-order/master/preview.webp)
+![Online Food Order Application](https://raw.githubusercontent.com/paul963/react-online-food-order/master/site-preview.webp)
 
 ### Overview
 React application connected to a Firebase database that allows users to view a menu and place orders. All orders are stored in the database.
