@@ -1,6 +1,5 @@
-import { useEffect, useState } from 'react';
+import { Fragment, useEffect, useState } from 'react';
 
-import Card from '../UI/Card';
 import MealItem from './MealItem/MealItem';
 import classes from './AvailableMeals.module.css';
 
@@ -23,13 +22,17 @@ const AvailableMeals = () => {
 
       const loadedMeals = [];
 
-      for (const key in responseData) {
-        loadedMeals.push({
-          id: key,
-          name: responseData[key].name,
-          description: responseData[key].description,
-          price: responseData[key].price,
-        });
+      for (const category in responseData) {
+        for (const key in responseData[category]) {
+          loadedMeals.push({
+            id: key,
+            category: category,
+            link: responseData[category][key].link,
+            name: responseData[category][key].name,
+            description: responseData[category][key].description,
+            price: responseData[category][key].price,
+          });
+        }
       }
 
       setMeals(loadedMeals);
@@ -58,21 +61,42 @@ const AvailableMeals = () => {
     );
   }
 
-  const mealsList = meals.map((meal) => (
-    <MealItem
-      key={meal.id}
-      id={meal.id}
-      name={meal.name}
-      description={meal.description}
-      price={meal.price}
-    />
-  ));
+  const groupedMeals = {};
+
+  meals.forEach((meal) => {
+    if (!groupedMeals[meal.category]) {
+      groupedMeals[meal.category] = [];
+    }
+    groupedMeals[meal.category].push(meal);
+  });
+
+  const mealsList = [];
+  for (const category in groupedMeals) {
+    if (groupedMeals.hasOwnProperty(category)) {
+      mealsList.push(
+        <Fragment key={category}>
+          <h2 style={{ textAlign: "center", textTransform: "uppercase" }}>{category}</h2>
+          {groupedMeals[category].map((meal) => (
+            <MealItem
+              key={meal.id}
+              id={meal.id}
+              category={meal.category}
+              link={meal.link}
+              name={meal.name}
+              description={meal.description}
+              price={meal.price}
+            />
+          ))}
+        </Fragment>
+      );
+    }
+  }
 
   return (
     <section className={classes.meals}>
-      <Card>
+      <div className={classes.mealsItem}>
         <ul>{mealsList}</ul>
-      </Card>
+      </div>
     </section>
   );
 };

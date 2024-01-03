@@ -18,3 +18,9 @@
   background-color: #222A2C;
   border-color: #222A2C;
 }
+
+@media (max-width: 768px) {
+  .form {
+    text-align: center;
+  }
+}

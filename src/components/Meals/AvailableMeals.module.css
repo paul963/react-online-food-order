@@ -5,6 +5,13 @@
   animation: meals-appear 1s ease-out forwards;
 }
 
+.meals .mealsItem {
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 14px;
+  background-color: white;
+}
+
 .meals ul {
   list-style: none;
   margin: 0;

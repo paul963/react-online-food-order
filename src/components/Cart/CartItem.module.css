@@ -7,9 +7,14 @@
   margin: 1rem 0;
 }
 
+.cart-item a {
+  text-decoration: none;
+}
+
 .cart-item h2 {
   margin: 0 0 0.5rem 0;
   color: #363636;
+  text-decoration: none;
 }
 
 .summary {
@@ -34,13 +39,6 @@
 
 .actions {
   display: flex;
-  flex-direction: column;
-}
-
-@media (min-width: 768px) {
-  .actions {
-    flex-direction: row;
-  }
 }
 
 .cart-item button {
@@ -62,4 +60,10 @@
 .cart-item button:active {
   background-color: #FFB500;
   color: white;
+}
+
+@media (max-width: 768px) {
+  .cart-item {
+    align-items: flex-end;
+  }
 }
