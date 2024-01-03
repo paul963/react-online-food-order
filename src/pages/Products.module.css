@@ -41,7 +41,6 @@
 .back {
   padding: 0.5rem 2rem 0.75rem;
   background-color: #ffb500;
-  border: 2px solid #ffb500;
   color: #ffffff;
   border-radius: 20px;
   font-weight: bold;
@@ -51,6 +50,10 @@
 .back:hover {
   cursor: pointer;
   background-color: #222a2c;
+}
+
+.MealsError .back {
+  border: 2px solid #ffb500;
 }
 
 @media (max-width: 768px) {
