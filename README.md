@@ -18,6 +18,6 @@ React application connected to a Firebase database that allows users to view a m
 
 ### Getting Started
 1. Clone repository
-2. Install dependencies `npm install` `npm i react-router-dom` `npm install firebase`
+2. Install dependencies `npm i`
 3. Firebase database is public. No additional configuration required
 4. Run the application `npm start`.
