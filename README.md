@@ -1,23 +1,25 @@
 # Online Food Order Application
-### [Live Site](https://react-online-food-order.netlify.app/)
+### View the demo [here](https://react-online-food-order.netlify.app/).
 ![Online Food Order Application](https://raw.githubusercontent.com/paul963/react-online-food-order/master/site-preview.webp)
 
 ### Overview
-React application connected to a Firebase database that allows users to view a menu and place orders. All orders are stored in the database.
+React application for a restaurant website. Users can view the menu, access each dish's page to see more details and place an order.\
+The application uses a Firebase database to retrieve the menu and store orders placed by users.
 
 ### Features
-- Displays to users all menu items from the Firebase database
-- Users can place an order and complete their address in checkout box
-- Orders are saved in the Firebase database
+- Accessing a restaurant menu
+- Users can place an order by filling in their personal details
+- All orders are saved in the database
 
-### Technologies Used
+### Technologies used
 - React
-- Firebase (Firestore/Realtime Database)
-- HTML/CSS
+- Firebase (Firestore Database)
+- HTML
+- CSS
 - JavaScript
 
-### Getting Started
+### Getting started
 1. Clone repository
-2. Install dependencies `npm i`
+2. Run `npm i` to install the required dependencies
 3. Firebase database is public. No additional configuration required
-4. Run the application `npm start`.
+4. Run `npm start` to start the web server
